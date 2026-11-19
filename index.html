@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Map Atlas · GEO 140 Map Quizzes</title>
+  <meta name="description" content="Interactive map quizzes for GEO 140 World Regional Geography: study, find and name every country and city on the course map lists.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><ellipse cx="12" cy="12" rx="4" ry="9.25"/><path d="M2.9 9h18.2M2.9 15h18.2"/></svg>
+        Map Atlas <small>GEO 140</small>
+      </a>
+      <nav class="topnav">
+        <a href="#regions">Regions</a>
+        <a href="#how">How it works</a>
+        <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">GEO 140 · World Regional Geography · Lake Land College</div>
+        <h1>Learn every place on the map.</h1>
+        <p class="lede">Interactive practice for each map quiz in the course. Study the labeled map, then test yourself by finding places on a blank map and naming highlighted ones, five at a time, until you can get them all in one run.</p>
+        <div class="stats">
+          <div class="stat"><b id="s-regions">7</b><span>Regional maps</span></div>
+          <div class="stat"><b id="s-places">221</b><span>Places to know</span></div>
+          <div class="stat"><b id="s-cities">—</b><span>Cities</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="regions">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Regions</div>
+            <h2>Choose a map</h2>
+          </div>
+          <p>Listed in the order they appear in the course. Your progress on each map is saved in this browser.</p>
+        </div>
+        <div class="grid" id="cards"></div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Method</div>
+            <h2>How it works</h2>
+          </div>
+          <p>Short sets build recall faster than one long list. Clear each set without a miss, then prove it with the full mix.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="n">01 · STUDY</span><h3>Learn the layout</h3><p>Every marker is labeled. Select any place for a short note on where it sits and what to remember.</p></div>
+          <div class="step"><span class="n">02 · FIND IT</span><h3>Locate on a blank map</h3><p>You get a name; tap its marker. Small places sit offshore with a dotted line to their true location.</p></div>
+          <div class="step"><span class="n">03 · NAME IT</span><h3>Identify the marker</h3><p>One marker is highlighted; choose its name from four options. The quiz moves on automatically.</p></div>
+          <div class="step"><span class="n">04 · MASTER</span><h3>Clear every set</h3><p>Sets of five must be answered with no misses. Finish with the full mix of the whole group.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>GEO 140 · World Regional Geography · Lake Land College</span>
+      <span>Base maps are the blank outline maps provided for each course map quiz.</span>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/theme.js"></script>
+  <script src="assets/home.js"></script>
+</body>
+</html>

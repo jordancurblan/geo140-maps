@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Map Quiz · Map Atlas</title>
+  <meta name="description" content="Interactive map quiz for GEO 140 World Regional Geography.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><ellipse cx="12" cy="12" rx="4" ry="9.25"/><path d="M2.9 9h18.2M2.9 15h18.2"/></svg>
+        Map Atlas <small>GEO 140</small>
+      </a>
+      <nav class="topnav">
+        <a href="./">
+          <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg>
+          All regions
+        </a>
+        <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap quiz">
+    <div class="quiz-head">
+      <div>
+        <div class="eyebrow" id="eyebrow">Map quiz</div>
+        <h1 id="title">Loading…</h1>
+        <p class="sub" id="subtitle"></p>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="stage">
+        <div class="map" id="map"><img id="mapimg" alt=""></div>
+      </div>
+
+      <aside class="panel" aria-label="Quiz controls">
+        <div class="control ctl-mode">
+          <span class="label">Mode</span>
+          <div class="seg" role="group" aria-label="Mode">
+            <button type="button" data-m="study" aria-pressed="true">Study</button>
+            <button type="button" data-m="find" aria-pressed="false">Find it</button>
+            <button type="button" data-m="name" aria-pressed="false">Name it</button>
+          </div>
+        </div>
+
+        <div class="control ctl-group">
+          <label for="group">Practice</label>
+          <select class="select" id="group"></select>
+        </div>
+
+        <div class="control ctl-sets" id="setsWrap">
+          <span class="label">Set</span>
+          <div class="chips" id="sets"></div>
+        </div>
+
+        <div class="card-q" id="prompt" aria-live="polite"></div>
+
+        <div class="progress" id="progress" hidden>
+          <div class="bar" id="pbar"></div>
+          <div class="meta"><span id="pcount"></span><span id="pscore"></span></div>
+        </div>
+
+        <div class="opts" id="opts" hidden></div>
+        <div class="actions" id="actions"></div>
+
+        <div class="legend" id="legend"></div>
+        <div class="kbd-hint" id="kbd"></div>
+      </aside>
+    </div>
+
+    <section class="reference" id="reference">
+      <div class="eyebrow">Reference</div>
+      <h2>Places in this quiz</h2>
+      <table class="ref-table">
+        <thead><tr><th>Name</th><th>Type</th><th>Notes</th></tr></thead>
+        <tbody id="refbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>GEO 140 · World Regional Geography · Lake Land College</span>
+      <span>Progress is saved in this browser.</span>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/theme.js"></script>
+  <script src="assets/quiz.js"></script>
+</body>
+</html>
